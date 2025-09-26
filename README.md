@@ -10,8 +10,9 @@ Design of Quadrature Output Two-stage Differential Ring VCO
 ### Output Buffer 
 ![output buffer](https://github.com/Subhampal9/A4-SiliconSouls_chipathon2025/blob/main/images/output_buffer.png)
 ## Current Status
-Without output buffer -
-fmax : 1.75 GHz
-fmin : 1.1 GHz
-Further tweaking will be done to increase the freq range.
-Work going on with output buffer.
+With output buffer -
+fmax : 2.25 GHz
+fmin : 0.45 GHz
+
+## Layout
+![top layout](https://github.com/Subhampal9/A4-SiliconSouls_chipathon2025/blob/main/images/top.png)
