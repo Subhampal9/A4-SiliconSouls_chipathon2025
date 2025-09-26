@@ -114,17 +114,15 @@ N 4030 -1970 4030 -1910 {lab=vdd}
 N 4150 -1740 4640 -1740 {lab=#net2}
 N 3740 -1730 3850 -1730 {lab=#net4}
 N 3590 -1730 3680 -1730 {lab=vi-}
-N 3790 -2510 3830 -2510 {lab=vdd}
-N 3790 -2600 3790 -2510 {lab=vdd}
-N 3790 -2600 4030 -2600 {lab=vdd}
-N 3780 -1820 3830 -1820 {lab=vdd}
-N 3780 -1890 3780 -1820 {lab=vdd}
-N 3780 -1890 4030 -1890 {lab=vdd}
+N 3790 -2510 3830 -2510 {lab=#net5}
+N 3790 -2600 3790 -2510 {lab=#net5}
+N 3780 -1820 3830 -1820 {lab=vss}
+N 3780 -1890 3780 -1820 {lab=vss}
 C {symbols/pfet_03v3.sym} 4710 -2510 0 0 {name=M38
 L=0.28u
 W=12u
 nf=1
-m=1
+m=4
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -138,7 +136,7 @@ C {symbols/nfet_03v3.sym} 4710 -2330 0 0 {name=M39
 L=0.28u
 W=5.3u
 nf=1
-m=1
+m=4
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -152,7 +150,7 @@ C {symbols/pfet_03v3.sym} 4710 -1820 0 0 {name=M40
 L=0.28u
 W=12u
 nf=1
-m=1
+m=4
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -166,7 +164,7 @@ C {symbols/nfet_03v3.sym} 4710 -1640 0 0 {name=M41
 L=0.28u
 W=5.3u
 nf=1
-m=1
+m=4
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -178,7 +176,7 @@ spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 5210 -2190 0 0 {name=M42
 L=0.28u
-W=0.9u
+W=2.25u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -192,7 +190,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 5210 -2010 0 0 {name=M43
 L=0.28u
-W=0.4u
+W=1u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -206,7 +204,7 @@ spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 5540 -2190 0 0 {name=M44
 L=0.28u
-W=0.9u
+W=2.25u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -220,7 +218,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 5540 -2010 0 0 {name=M45
 L=0.28u
-W=0.4u
+W=1u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -240,9 +238,9 @@ C {lab_pin.sym} 5560 -2310 2 0 {name=p37 sig_type=std_logic lab=vdd}
 C {lab_pin.sym} 4730 -1940 2 0 {name=p38 sig_type=std_logic lab=vdd}
 C {symbols/pfet_03v3.sym} 4010 -2510 0 0 {name=M24
 L=0.28u
-W=0.9u
+W=2.2u
 nf=1
-m=1
+m=2
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -254,9 +252,9 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 4010 -2330 0 0 {name=M25
 L=0.28u
-W=0.4u
+W=1u
 nf=1
-m=1
+m=2
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -267,16 +265,11 @@ model=nfet_03v3
 spiceprefix=X
 }
 C {lab_pin.sym} 4030 -2680 1 0 {name=p13 sig_type=std_logic lab=vdd}
-C {capa.sym} 3710 -2420 3 0 {name=C2
-m=1
-value=10f
-footprint=1206
-device="ceramic capacitor"}
 C {symbols/pfet_03v3.sym} 4010 -1820 0 0 {name=M1
 L=0.28u
-W=0.9u
+W=2.2u
 nf=1
-m=1
+m=2
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -288,9 +281,9 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 4010 -1640 0 0 {name=M2
 L=0.28u
-W=0.4u
+W=1u
 nf=1
-m=1
+m=2
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -301,11 +294,6 @@ model=nfet_03v3
 spiceprefix=X
 }
 C {lab_pin.sym} 4030 -1990 1 0 {name=p1 sig_type=std_logic lab=vdd}
-C {capa.sym} 3710 -1730 3 0 {name=C1
-m=1
-value=10f
-footprint=1206
-device="ceramic capacitor"}
 C {lab_pin.sym} 5560 -1940 2 0 {name=p2 sig_type=std_logic lab=vss}
 C {lab_pin.sym} 5230 -1940 2 0 {name=p3 sig_type=std_logic lab=vss}
 C {lab_pin.sym} 4730 -1570 2 0 {name=p4 sig_type=std_logic lab=vss}
@@ -321,15 +309,29 @@ C {ipin.sym} 3120 -2250 0 0 {name=p14 lab=vi-}
 C {opin.sym} 3240 -2290 0 0 {name=p15 lab=vo+}
 C {opin.sym} 3240 -2250 0 0 {name=p16 lab=vo-}
 C {title.sym} 3090 -1070 0 0 {name=l1 author="Silicon Souls"}
-C {symbols/ppolyf_u_2k.sym} 3850 -2510 0 0 {name=R1
-W=1u
-L=30u
-model=ppolyf_u_2k
+C {symbols/cap_mim_1f0fF.sym} 3710 -1730 1 0 {name=C1
+W=5e-6
+L=5e-6
+model=cap_mim_1f0fF
 spiceprefix=X
 m=1}
-C {symbols/ppolyf_u_2k.sym} 3850 -1820 0 0 {name=R2
-W=1u
-L=30u
-model=ppolyf_u_2k
+C {symbols/cap_mim_1f0fF.sym} 3710 -2420 1 0 {name=C2
+W=5e-6
+L=5e-6
+model=cap_mim_1f0fF
 spiceprefix=X
 m=1}
+C {symbols/ppolyf_u_1k.sym} 3850 -2510 0 0 {name=R1
+W=1e-6
+L=50e-6
+model=ppolyf_u_1k
+spiceprefix=X
+m=1}
+C {symbols/ppolyf_u_1k.sym} 3850 -1820 0 0 {name=R2
+W=1e-6
+L=50e-6
+model=ppolyf_u_1k
+spiceprefix=X
+m=1}
+C {lab_pin.sym} 3780 -1880 2 0 {name=p17 sig_type=std_logic lab=vss}
+C {lab_pin.sym} 3790 -2580 2 0 {name=p18 sig_type=std_logic lab=vss}

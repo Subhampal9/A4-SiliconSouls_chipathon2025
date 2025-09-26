@@ -96,7 +96,9 @@ format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
+.lib $::180MCU_MODELS/sm141064.ngspice cap_mim
 .lib $::180MCU_MODELS/sm141064.ngspice res_typical
+.lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
 "}
 C {devices/code_shown.sym} 2890 -760 0 0 {name=NGSPICE only_toplevel=true
 value="
@@ -126,6 +128,8 @@ dowhile vctrl <= stop_v
 end
 set nolegend
 print freq_results 
+set filetype=ascii
+write /foss/designs/vco_des/xschem/freq.txt freq_results
 .endc
 "}
 C {opbuffer.sym} 1300 -560 1 0 {name=xbuffer1}
